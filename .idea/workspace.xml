@@ -4,80 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="812dd0e3-9bd2-45b8-b7ac-8d61cca779b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/forum/controller/form/AtualizacaoTopicoForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/forum/controller/form/AtualizacaoTopicoForm.java" afterDir="false" />
-    </list>
+    <list default="true" id="446c2e68-599e-4382-af9c-1a4dcd06f51e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Modulo-SpringBoot" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2GhGyEygWttecLobJPeNBewlCU5" />
+  <component name="ProjectId" id="2Gy3fY7XCnxaAs7tRjscSguA18h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/LeandroMonte/Desktop/ALURA CITS/ProjetoForum/spring-data-jpa",
+    "last_opened_file_path": "C:/Users/LeandroMonte/Desktop/ALURA CITS/ProjetoForum/forum",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "show.run.dashboard.notification": "false",
-    "spring.configuration.checksum": "bbdbe444288550204c968fe7002a97a9"
+    "node.js.selected.package.tslint": "(autodetect)"
   },
   "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
-    ],
     "GitStage.ChangesTree.GroupingKeys": [
       "directory",
       "module",
@@ -85,81 +41,20 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.ForumApplication">
-    <configuration name="ForumApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="forum" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.alura.forum.ForumApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpringDataApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="spring-data" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.alura.spring.data.SpringDataApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="812dd0e3-9bd2-45b8-b7ac-8d61cca779b3" name="Changes" comment="" />
-      <created>1666833655362</created>
+      <changelist id="446c2e68-599e-4382-af9c-1a4dcd06f51e" name="Changes" comment="" />
+      <created>1667347102021</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1666833655362</updated>
-      <workItem from="1666833656591" duration="454000" />
-      <workItem from="1666872000499" duration="1491000" />
-      <workItem from="1666907031391" duration="8642000" />
-      <workItem from="1666997424589" duration="1820000" />
-      <workItem from="1667078523541" duration="2829000" />
-      <workItem from="1667345206763" duration="280000" />
-      <workItem from="1667345507310" duration="258000" />
-      <workItem from="1667345775869" duration="349000" />
-      <workItem from="1667346264334" duration="33000" />
-      <workItem from="1667346305985" duration="371000" />
+      <updated>1667347102021</updated>
+      <workItem from="1667347103886" duration="11000" />
+      <workItem from="1667347169878" duration="604000" />
     </task>
-    <task id="LOCAL-00001" summary="Fixing Project Module">
-      <created>1666833857143</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1666833857143</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Fixing Project Module">
-      <created>1667345821436</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1667345821436</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Fixing Project Module">
-      <created>1667346582845</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1667346582845</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixing Project Module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing Project Module" />
   </component>
 </project>
