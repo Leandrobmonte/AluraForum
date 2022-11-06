@@ -30,7 +30,6 @@ public class AutenticacaoviaTokenFilter extends OncePerRequestFilter {
         //recuperar token aqui
         String token = recuperarToken(httpServletRequest);
         Boolean valido = tokenService.isTokenValido(token);
-        System.out.println(valido);
 
         if(valido){
             autenticaCliente(token);
