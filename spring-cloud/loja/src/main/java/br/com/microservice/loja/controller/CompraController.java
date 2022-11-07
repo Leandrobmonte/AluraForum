@@ -1,6 +1,7 @@
 package br.com.microservice.loja.controller;
 
 import br.com.microservice.loja.controller.dto.CompraDto;
+import br.com.microservice.loja.model.Compra;
 import br.com.microservice.loja.service.CompraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -17,7 +18,7 @@ public class CompraController {
     private CompraService compraService;
 
     @PostMapping
-    public void realizaCompra(@RequestBody CompraDto compraDto){
-        compraService.realizaCompra(compraDto);
+    public Compra realizaCompra(@RequestBody CompraDto compraDto){
+        return compraService.realizaCompra(compraDto);
     }
 }
