@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <include resource="org/springframework/boot/logging/logback/default.xml"/>
 
     <appender name="PAPERTRAIL" class="ch.qos.logback.classic.net.SyslogAppender">
         <syslogHost>logs6.papertrailapp.com</syslogHost>
