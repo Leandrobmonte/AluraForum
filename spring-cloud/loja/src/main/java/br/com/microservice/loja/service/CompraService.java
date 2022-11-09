@@ -1,9 +1,12 @@
 package br.com.microservice.loja.service;
 
 import br.com.microservice.loja.client.FornecedorClient;
+import br.com.microservice.loja.client.TransportadorClient;
 import br.com.microservice.loja.controller.dto.CompraDto;
+import br.com.microservice.loja.controller.dto.InfoEntregaDto;
 import br.com.microservice.loja.controller.dto.InfoFornecedorDto;
 import br.com.microservice.loja.controller.dto.InfoPedidoDto;
+import br.com.microservice.loja.controller.dto.VoucherDto;
 import br.com.microservice.loja.model.Compra;
 import br.com.microservice.loja.repository.CompraRepository;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -11,6 +14,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 
 
 @Service
@@ -21,6 +26,9 @@ public class CompraService {
 
     @Autowired
     private FornecedorClient fornecedorClient;
+
+    @Autowired
+    private TransportadorClient transportadorClient;
 
     @Autowired
     private CompraRepository compraRepository;
@@ -37,15 +45,23 @@ public class CompraService {
         LOG.info("biscando informações do fornecedor de {}", estado);
 
         InfoFornecedorDto info = fornecedorClient.getInfoPorEstado(estado);
+        InfoPedidoDto pedido = fornecedorClient.realizaPedido(compraDto.getItens());
+
+        InfoEntregaDto entregaDto = new InfoEntregaDto();
+        entregaDto.setPedidoId(pedido.getId());
+        entregaDto.setDataParaEntrega(LocalDate.now().plusDays(pedido.getTempoDePreparo()));
+        entregaDto.setEnderecoOrigem(info.getEndereco());
+        entregaDto.setEnderecoDestino(compraDto.getEndereco().toString());
+        VoucherDto voucher = transportadorClient.reservaEntrega(entregaDto);
 
         LOG.info("realizando um pedido");
 
-        InfoPedidoDto pedido = fornecedorClient.realizaPedido(compraDto.getItens());
         Compra compraSalva = new Compra();
         compraSalva.setPedidoId(pedido.getId());
         compraSalva.setTempoDePreparo(pedido.getTempoDePreparo());
         compraSalva.setEnderecoDestino(compraDto.getEndereco().toString());
-
+        compraSalva.setDataParaEntrega(voucher.getPrevisaoParaEntrega());
+        compraSalva.setVoucher(voucher.getNumero());
         compraRepository.save(compraSalva);
 
         return compraSalva;
