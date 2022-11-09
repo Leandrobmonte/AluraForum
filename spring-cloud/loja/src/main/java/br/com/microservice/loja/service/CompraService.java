@@ -5,6 +5,7 @@ import br.com.microservice.loja.controller.dto.CompraDto;
 import br.com.microservice.loja.controller.dto.InfoFornecedorDto;
 import br.com.microservice.loja.controller.dto.InfoPedidoDto;
 import br.com.microservice.loja.model.Compra;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,11 @@ public class CompraService {
 
     private static final Logger LOG = LoggerFactory.getLogger(CompraService.class);
 
+
     @Autowired
     private FornecedorClient fornecedorClient;
 
+    @HystrixCommand(fallbackMethod = "realizaCompraFallback")
     public Compra realizaCompra(CompraDto compraDto) {
         final String estado = compraDto.getEndereco().getEstado();
 
@@ -33,7 +36,21 @@ public class CompraService {
         compraSalva.setPedidoId(pedido.getId());
         compraSalva.setTempoDePreparo(pedido.getTempoDePreparo());
         compraSalva.setEnderecoDestino(compraDto.getEndereco().toString());
+
+        try {
+            Thread.sleep(10000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
         return compraSalva;
+    }
+
+    public Compra realizaCompraFallback(CompraDto compra){
+        Compra compraFallback = new Compra();
+
+        compraFallback.setEnderecoDestino(compra.getEndereco().toString());
+        return compraFallback;
     }
 
 
